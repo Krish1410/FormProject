@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Hello , This is a form</title>
+    <link rel="stylesheet" href="/css/form.css">
+</head>
+<body>
+    <h1>My Form</h1>
+    <form method="get" action="./index.htm" onsubmit="return varify()">
+        <input type="number" id="id">
+        <div id="inputname">
+            <span>Name : </span><span class="errorclass" id="error"></span>
+            <br>
+            <input type="text" placeholder="Name" name="name" id="Name">
+        </div>
+        <div id="inputname">
+            <span>Email : </span><span class="errorclass" id="error1"></span>
+            <br>
+            <input type="email" placeholder="abc@xyz.com" name="email" id="email">
+        </div>
+        <div id="inputname">
+            <span>Phone Number : </span><span class="errorclass" id="error2"></span>
+            <br>
+            <input type="tel" placeholder="Phone Number" name="pnumber" id="pnumber">
+        </div>
+        <div id="inputname">
+            <span>Age : </span><span class="errorclass" id="error3"></span>
+            <br>
+            <input type="tel" placeholder="Age" name="age" id="age">
+        </div>
+        <div id="submitButton">
+            <button type="submit">Submit</button>
+        </div>
+    </form>
+    <hr>
+    
+</body>
+<script src="/js/form.js">
+   
+</script>
+</html>

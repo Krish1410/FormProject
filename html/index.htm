@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Render Page</title>
+    <style>
+        body{
+            color: rgb(255, 255, 255);
+            background: #000;
+        }
+        a{
+            text-decoration: underline;
+            color: rgb(243, 243, 243);
+        }
+        #pname{            
+            color: rgba(255, 255, 255, 0.993);
+            font-size:20px;
+        }
+        .data{
+            
+            color: orange;
+            border-bottom: 2px dotted orange;
+        }
+    </style>
+</head>
+<body>
+    <p class="pname">Hello  : <span id="name" class="data"></span></p>
+    <p class="pname">Email  : <span id="temail" class="data"></span></p>
+    <p class="pname">Number : <span id="tpnumber" class="data"></span></p>
+    <p class="pname">Age    : <span id="tage" class="data"></span></p>
+    <a href="javascript:history.back();">Go Back</a>
+    
+</body>
+<script>
+    var value=JSON.parse(localStorage.getItem('value'))
+    console.log(value);
+
+    for(var i in value){
+        console.log(i);
+            document.getElementById("name").innerHTML=value[i][0]
+            document.getElementById("temail").innerHTML=value[i][1]
+            document.getElementById("tpnumber").innerHTML=value[i][2]
+            document.getElementById("tage").innerHTML=value[i][3]
+
+    }
+</script>
+</html>
